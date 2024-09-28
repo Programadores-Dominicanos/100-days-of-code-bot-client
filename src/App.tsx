@@ -1,15 +1,12 @@
-import './App.css'
-import { Button } from '@nextui-org/react'
+import "./App.css";
+import AppRouter from "./router/AppRouter";
 
 function App() {
-
   return (
     <>
-      <Button>
-        hLJDLSJDSL
-      </Button>
+      <AppRouter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
