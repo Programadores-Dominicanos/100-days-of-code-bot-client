@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "commit": "commit",
     "preview": "vite preview",
     "prepare": "husky"
   },
@@ -24,6 +25,9 @@
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/prompt-cli": "^19.5.0",
     "@eslint/js": "^9.9.0",
     "@rollup/plugin-alias": "^5.1.1",
     "@types/react": "^18.3.3",
