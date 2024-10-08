@@ -32,5 +32,9 @@ export default {
     },
   },
   darkMode: "media",
-  plugins: [nextui()],
+  plugins: [nextui({
+    themes: {
+      
+    }
+  })],
 };
