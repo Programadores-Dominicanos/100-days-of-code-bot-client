@@ -1,7 +1,7 @@
 import { FC, ReactNode, Suspense, useEffect } from "react";
 import { ErrorBoundary, FallbackProps } from "react-error-boundary";
-import Text from "../text/Text";
 import { Button } from "@nextui-org/react";
+import Text from '@components/text/Text'
 
 interface IErrorBoundaryComponent {
   suspendComponent: ReactNode;
