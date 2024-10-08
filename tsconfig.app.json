@@ -17,9 +17,8 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/shared/components/*"],
       "@shared/*": ["./src/shared/*"],
-      "@public/*": ["./src/public/*"],
       "@assets/*": ["./src/assets/*"],
-      "@private/*": ["./src/private/*"]
+      "@modules/*": ["./src/modules/*"]
     },
 
     /* Linting */
