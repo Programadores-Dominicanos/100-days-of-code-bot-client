@@ -7,7 +7,7 @@ interface ITextProps
 }
 
 const Text = forwardRef<HTMLElement, ITextProps>(
-  ({ children, variant = "p", className, ...rest }, ref) => {
+  ({ children, variant = "p", className = '', ...rest }, ref) => {
     const textSizeClass = useMemo(() => {
       switch (variant) {
         case "h1":
@@ -32,8 +32,8 @@ const Text = forwardRef<HTMLElement, ITextProps>(
       case "h1":
         return (
           <h1
+          {...rest}
             className={textSizeClass}
-            {...rest}
             ref={ref as React.Ref<HTMLHeadingElement>}
           >
             {children}
@@ -42,8 +42,8 @@ const Text = forwardRef<HTMLElement, ITextProps>(
       case "h2":
         return (
           <h2
+          {...rest}
             className={textSizeClass}
-            {...rest}
             ref={ref as React.Ref<HTMLHeadingElement>}
           >
             {children}
@@ -62,8 +62,8 @@ const Text = forwardRef<HTMLElement, ITextProps>(
       case "h4":
         return (
           <h4
+          {...rest}
             className={textSizeClass}
-            {...rest}
             ref={ref as React.Ref<HTMLHeadingElement>}
           >
             {children}
@@ -72,8 +72,8 @@ const Text = forwardRef<HTMLElement, ITextProps>(
       case "h5":
         return (
           <h5
+          {...rest}
             className={textSizeClass}
-            {...rest}
             ref={ref as React.Ref<HTMLHeadingElement>}
           >
             {children}
@@ -82,8 +82,8 @@ const Text = forwardRef<HTMLElement, ITextProps>(
       case "span":
         return (
           <span
+          {...rest}
             className={textSizeClass}
-            {...rest}
             ref={ref as React.Ref<HTMLSpanElement>}
           >
             {children}
@@ -93,8 +93,8 @@ const Text = forwardRef<HTMLElement, ITextProps>(
       default:
         return (
           <p
+          {...rest}
             className={textSizeClass}
-            {...rest}
             ref={ref as React.Ref<HTMLParagraphElement>}
           >
             {children}
