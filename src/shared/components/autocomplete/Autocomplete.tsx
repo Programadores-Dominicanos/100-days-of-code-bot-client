@@ -5,23 +5,20 @@ import {
   AutocompleteItemProps,
 } from "@nextui-org/react";
 
-export type TAutocompleteItems = {
+export interface IAutocompleteItems {
   label: string;
   value: string | number;
   id?: string | number;
-};
-type TAutocompleteProps = Omit<AutocompleteProps, "children"> & {
-  items: TAutocompleteItems[];
+}
+
+interface IAutocompleteProps extends Omit<AutocompleteProps, "children"> {
+  items: IAutocompleteItems[];
   itemProps?: Omit<AutocompleteItemProps, "children">;
-};
+}
 
-const AutocompleteComponent = (props: TAutocompleteProps) => {
-  const config: TAutocompleteProps = {
-    ...props,
-  };
-
+const AutocompleteComponent = (props: IAutocompleteProps): JSX.Element => {
   return (
-    <Autocomplete {...config}>
+    <Autocomplete {...props}>
       {props.items.map((item) => (
         <AutocompleteItem
           {...props.itemProps}

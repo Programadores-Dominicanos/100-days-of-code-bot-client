@@ -1,6 +1,8 @@
 import { Button as NextUIButton, ButtonProps } from "@nextui-org/react";
 
-type CustomButtonProps = ButtonProps;
+interface CustomButtonProps extends ButtonProps {
+  children: React.ReactNode;
+}
 
 export const Button = ({
   children,

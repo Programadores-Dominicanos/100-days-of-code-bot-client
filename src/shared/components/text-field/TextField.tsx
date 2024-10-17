@@ -1,8 +1,6 @@
 import { Input, InputProps } from "@nextui-org/react";
 
-type TextFieldProps = InputProps & {};
-
-const TextField = (props: TextFieldProps) => {
+const TextField = (props: InputProps) => {
   const config: InputProps = {
     ...props,
   };
