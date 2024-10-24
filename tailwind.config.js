@@ -44,7 +44,9 @@ export default {
           info: '#0072F5',
           background: '#FFFFFF',
           foreground: '#11181C',
-          // You can add more color definitions here
+          navbar: '#121212',
+          textPrimary: '#FFFFFF',
+          textSecondary: '#787878',          // You can add more color definitions here
         }
       },
       dark: {
@@ -57,6 +59,9 @@ export default {
           info: '#3B82F6',
           background: '#000000',
           foreground: '#ECEDEE',
+          navbar: '#121212',
+          textPrimary: '#FFFFFF',
+          textSecondary: '#787878',
           // You can add more color definitions here
         }
       }
