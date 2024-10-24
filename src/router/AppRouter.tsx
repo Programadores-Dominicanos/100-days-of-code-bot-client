@@ -3,7 +3,7 @@ import Layout from "@/shared/components/layout/MainLayout";
 import { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const ComponentsPage = lazy(() => import("@modules/components/Components"));
+const HomePage = lazy(() => import("@modules/home/Home"));
 
 const AppRouter = () => {
   return (
@@ -11,7 +11,7 @@ const AppRouter = () => {
       <PublicErrorBoundary>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<ComponentsPage />} />
+            <Route path="/" element={<HomePage />} />
           </Route>
         </Routes>
       </PublicErrorBoundary>
