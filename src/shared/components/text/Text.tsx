@@ -9,22 +9,24 @@ interface ITextProps
 const Text = forwardRef<HTMLElement, ITextProps>(
   ({ children, variant = "p", className = '', ...rest }, ref) => {
     const textSizeClass = useMemo(() => {
+      const defaultColorClass = "text-textPrimary"; // Add this line
+
       switch (variant) {
         case "h1":
-          return `text-4xl font-bold ${className}`; // Large size for h1
+          return `text-4xl font-bold ${defaultColorClass} ${className}`; // Large size for h1
         case "h2":
-          return `text-3xl font-semibold ${className}`; // Slightly smaller for h2
+          return `text-3xl font-semibold ${defaultColorClass} ${className}`; // Slightly smaller for h2
         case "h3":
-          return `text-2xl font-medium ${className}`;
+          return `text-2xl font-medium ${defaultColorClass} ${className}`;
         case "h4":
-          return `text-xl font-medium ${className}`;
+          return `text-xl font-medium ${defaultColorClass} ${className}`;
         case "h5":
-          return `text-lg font-medium ${className}`;
+          return `text-lg font-medium ${defaultColorClass} ${className}`;
         case "span":
-          return `text-base ${className}`; // Default size for inline elements
+          return `text-base ${defaultColorClass} ${className}`; // Default size for inline elements
         case "p":
         default:
-          return `text-base ${className}`; // Default size for paragraphs
+          return `text-base ${defaultColorClass} ${className}`; // Default size for paragraphs
       }
     }, [variant, className]);
 
