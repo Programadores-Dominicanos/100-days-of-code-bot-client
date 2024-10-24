@@ -1,14 +1,7 @@
 import { Button } from "@/shared/components/button/Button";
 import Text from "@/shared/components/text/Text";
-import { Code } from "@nextui-org/react";
 
 const Components = () => {
-  const textExampleCode = `
-        <Text variant="h1" className="font-semibold">
-            Hello word
-        </Text>
-    `;
-
   return (
     <div className="px-10 py-3">
       <div>
@@ -16,7 +9,6 @@ const Components = () => {
         <div className="mt-5">
           <Text variant="h2">Text</Text>
           <Text>Text component will be used in all application typography</Text>
-          <Code title="example use">{textExampleCode}</Code>
           <Text variant="h1">H1</Text>
           <Text variant="h2">H2</Text>
           <Text variant="h3">H3</Text>
